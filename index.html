@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ar">
 <head>
@@ -72,7 +73,7 @@
 
             if (users[username] && users[username] === password) {
                 alert("تم تسجيل الدخول بنجاح!");
-                // يمكنك هنا توجيه المستخدم إلى الصفحة الرئيسية بعد تسجيل الدخول
+                window.location.href = "main.html";  // توجيه المستخدم إلى الصفحة الرئيسية
             } else {
                 alert("اسم المستخدم أو كلمة المرور غير صحيحة!");
             }
@@ -80,3 +81,60 @@
     </script>
 </body>
 </html>
+
+الصفحة الرئيسية main.html:
+
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICT Project - الصفحة الرئيسية</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
+        .main-container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 600px;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        p {
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+        .btn {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <h1>مرحبا بك في ICT Project</h1>
+        <p>تم تسجيل الدخول بنجاح. يمكنك الآن الوصول إلى المحتوى.</p>
+        <a href="page2.html" class="btn">انتقل إلى الصفحة التالية</a>
+    </div>
+</body>
+</html.>
