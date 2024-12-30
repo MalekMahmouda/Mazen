@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICT Project - تسجيل الدخول</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .login-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .input-field {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .login-btn {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .login-btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>تسجيل الدخول</h2>
+        <form>
+            <input type="text" id="username" class="input-field" placeholder="اسم المستخدم" required>
+            <input type="password" id="password" class="input-field" placeholder="كلمة المرور" required>
+            <button type="button" class="login-btn" onclick="checkLogin()">تسجيل الدخول</button>
+        </form>
+    </div>
+
+    <script>
+        const users = {
+            "Malek Mahmoud": "Ict",
+            "Yassen Mahmoud": "Ict",
+            "Khaled": "Ict",
+            "Mazen Fathi": "Ict",
+            "Anas Ahmed": "Ict",
+            "Mohamed Farouk": "Ict"
+        };
+
+        function checkLogin() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            if (users[username] && users[username] === password) {
+                alert("تم تسجيل الدخول بنجاح!");
+                // يمكنك هنا توجيه المستخدم إلى الصفحة الرئيسية بعد تسجيل الدخول
+            } else {
+                alert("اسم المستخدم أو كلمة المرور غير صحيحة!");
+            }
+        }
+    </script>
+</body>
+</html>
