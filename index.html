@@ -1,140 +1,98 @@
-
 <!DOCTYPE html>
 <html lang="ar">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ICT Project - تسجيل الدخول</title>
+    <title>Eduverse</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-        .login-container {
-            background-color: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            width: 300px;
-        }
-        h2 {
             text-align: center;
-            margin-bottom: 20px;
+            background-color: #f4f4f4;
+            color: #333;
         }
-        .input-field {
-            width: 100%;
+        header {
+            background-color: #4CAF50;
+            padding: 20px;
+            color: white;
+            font-size: 24px;
+        }
+        .content {
+            margin: 20px;
+        }
+        .login-form {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        input {
             padding: 10px;
             margin: 10px 0;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-        }
-        .login-btn {
             width: 100%;
-            padding: 10px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
+            border: 1px solid #ccc;
             border-radius: 5px;
-            cursor: pointer;
         }
-        .login-btn:hover {
-            background-color: #45a049;
-        }
-    </style>
-</head>
-<body>
-    <div class="login-container">
-        <h2>تسجيل الدخول</h2>
-        <form>
-            <input type="text" id="username" class="input-field" placeholder="اسم المستخدم" required>
-            <input type="password" id="password" class="input-field" placeholder="كلمة المرور" required>
-            <button type="button" class="login-btn" onclick="checkLogin()">تسجيل الدخول</button>
-        </form>
-    </div>
-
-    <script>
-        const users = {
-            "Malek Mahmoud": "Ict",
-            "Yassen Mahmoud": "Ict",
-            "Khaled": "Ict",
-            "Mazen Fathi": "Ict",
-            "Anas Ahmed": "Ict",
-            "Mohamed Farouk": "Ict"
-        };
-
-        function checkLogin() {
-            const username = document.getElementById('username').value;
-            const password = document.getElementById('password').value;
-
-            if (users[username] && users[username] === password) {
-                alert("تم تسجيل الدخول بنجاح!");
-                window.location.href = "main.html";  // توجيه المستخدم إلى الصفحة الرئيسية
-            } else {
-                alert("اسم المستخدم أو كلمة المرور غير صحيحة!");
-            }
-        }
-    </script>
-</body>
-</html>
-
-الصفحة الرئيسية main.html:
-
-<!DOCTYPE html>
-<html lang="ar">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ICT Project - الصفحة الرئيسية</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            text-align: center;
-        }
-        .main-container {
-            background-color: white;
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            width: 80%;
-            max-width: 600px;
-        }
-        h1 {
-            margin-bottom: 20px;
-        }
-        p {
-            margin-bottom: 20px;
-            font-size: 18px;
-        }
-        .btn {
+        button {
             padding: 10px 20px;
             background-color: #4CAF50;
             color: white;
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            text-decoration: none;
         }
-        .btn:hover {
-            background-color: #45a049;
+        .main-content {
+            background-color: #ffffff;
+            padding: 20px;
+            margin-top: 30px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        h2, ul {
+            text-align: left;
+            padding-left: 20px;
         }
     </style>
 </head>
 <body>
-    <div class="main-container">
-        <h1>مرحبا بك في ICT Project</h1>
-        <p>تم تسجيل الدخول بنجاح. يمكنك الآن الوصول إلى المحتوى.</p>
-        <a href="page2.html" class="btn">انتقل إلى الصفحة التالية</a>
+
+<header>
+    <h1>مرحباً بكم في Eduverse</h1>
+    <p>منصة تعليمية مبتكرة</p>
+</header>
+
+<div class="content">
+    <div class="main-content">
+        <h2>حول Eduverse</h2>
+        <p>Eduverse هي منصة تعليمية تهدف إلى تقديم محتوى تعليمي شامل للطلاب في مختلف المجالات. نقدم دورات تعليمية في البرمجة، الرياضيات، والعلوم وغيرها. انضموا إلى منصتنا لتطوير مهاراتكم وتعلم مهارات جديدة.</p>
+
+        <h3>الدورات والمواضيع:</h3>
+        <ul>
+            <li><a href="#">دورة البرمجة</a></li>
+            <li><a href="#">دورة الرياضيات</a></li>
+            <li><a href="#">دورة العلوم</a></li>
+        </ul>
     </div>
+
+    <div class="login-form">
+        <h3>تسجيل الدخول</h3>
+        <form>
+            <input type="text" placeholder="اسم المستخدم" required>
+            <input type="password" placeholder="كلمة المرور" required>
+            <button type="submit">تسجيل الدخول</button>
+        </form>
+        <h4>أو قم بتسجيل الدخول باستخدام الحسابات التالية:</h4>
+        <ul>
+            <li><strong>Malek</strong> - 7G</li>
+            <li><strong>Khaled</strong> - 7G</li>
+            <li><strong>Yassen</strong> - 7G</li>
+            <li><strong>Anas</strong> - 7G</li>
+            <li><strong>Mohamed</strong> - 7G</li>
+            <li><strong>Mazen</strong> - 7G</li>
+        </ul>
+    </div>
+</div>
+
 </body>
-</html.>
+</html>
